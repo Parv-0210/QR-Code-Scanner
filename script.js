@@ -16,7 +16,9 @@ function fetchRequest(file, formData) {
         document.querySelector("textarea").innerText = result;
         form.querySelector("img").src = URL.createObjectURL(file);
         wrapper.classList.add("active");
-    }).catch(() => {
+    }).catch((error) => {
+        console.log(error);
+        console.log("hi");
         infoText.innerText = "Could not scan your QR Code";
     });
 }
